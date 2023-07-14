@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 // components
 import ParticlesContainer from '../components/ParticlesContainer'
-import Projectstn from '../components/ProjectsBtn'
+import ProjectsBtn from '../components/ProjectsBtn'
 import Avatar from '../components/Avatar'
 
 // framer motion
@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 
 // variants
 import { fadeIn } from '../variants'
-import ProjectsBtn from '../components/ProjectsBtn'
+
 
 const Home = () => {
   return (
@@ -63,7 +63,7 @@ const Home = () => {
         xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge
 '/>
         {/* particles */}
-        <div />
+        <ParticlesContainer />
         {/* avatar img */}
         <motion.div
           variants={fadeIn('up', 0.5)}
@@ -71,7 +71,7 @@ const Home = () => {
           animate='show'
           exit='hidden'
           transition={{ duration: 1, ease: 'easeInOut' }}
-          className='ax-w-[737px] mx-h-[678px] absolute 
+          className='max-w-[737px] max-h-[678px] absolute 
         bottom-[0px] lg:right-[6%]'>
           <Avatar />
         </motion.div>
