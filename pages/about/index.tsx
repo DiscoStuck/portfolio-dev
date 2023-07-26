@@ -90,7 +90,6 @@ const aboutData = [
 ];
 
 // components
-import Avatar from '../../components/Avatar';
 import Circles from '../../components/Circles'
 
 // framer motion
@@ -107,16 +106,6 @@ const About = () => {
     <div className='h-full bg-primary/30 py-32 text-center
     xl:text-left'>
       <Circles />
-      {/* avatar img */}
-      <motion.div
-        variants={fadeIn('right', 0.2)}
-        initial='hidden'
-        animate='show'
-        exit='hidden'
-        className='hidden xl:flex absolute bottom-0 -left-[370px]'
-      >
-        <Avatar />
-      </motion.div>
       <div className='container mx-auto h-full flex flex-col
       items-center xl:flex-row gap-x-6'>
         {/* text */}
@@ -140,56 +129,6 @@ const About = () => {
             remote work for agencies, consulted for startups, and collaborated
             on digital products for business and consumer use.
           </motion.p>
-          {/* counters */}
-          <motion.div
-            variants={fadeIn('right', 0.6)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'>
-            <div className='flex flex-1 xl:gap-x-6'>
-              {/* experience */}
-              <div className='relative flex-1 after:w-[1px] after:h-full
-              after:bg-white/10 after:absolute after:top-0 after:right-0'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={10} duration={10} delay={1} />+
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Years of experience
-                </div>
-              </div>
-              {/* clients */}
-              <div className='relative flex-1 after:w-[1px] after:h-full
-              after:bg-white/10 after:absolute after:top-0 after:right-0'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={250} duration={11} delay={2} />+
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Satisfied Clients
-                </div>
-              </div>
-              {/* projects */}
-              <div className='relative flex-1 after:w-[1px] after:h-full
-              after:bg-white/10 after:absolute after:top-0 after:right-0'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={650} duration={12} delay={3} />+
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Finished Projects
-                </div>
-              </div>
-              {/* awards */}
-              <div className='relative flex-1 after:w-[1px] after:h-full
-              after:bg-white/10 after:absolute after:top-0 after:right-0'>
-                <div className='text-2xl xl:text-4xl font-extrabold text-accent mb-2'>
-                  <CountUp start={0} end={8} duration={13} delay={4} />+
-                </div>
-                <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'>
-                  Winning Awards
-                </div>
-              </div>
-            </div>
-          </motion.div>
         </div>
         {/* info */}
         <motion.div

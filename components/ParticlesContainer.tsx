@@ -44,21 +44,14 @@ const ParticlesContainer = () => {
             push: {
               quantity: 90
             }, repulse: {
-              distance: 100,
-              duration: 0.8
+              distance: 120,
+              duration: 1
             }
           }
         },
         particles: {
           color: {
             value: '#e68e2e'
-          },
-          links: {
-            color: '#f5d393',
-            distance: 150,
-            enable: true,
-            opacity: 0.5,
-            width: 1
           },
           collisions: {
             enable: true
@@ -87,7 +80,7 @@ const ParticlesContainer = () => {
             type: 'circle'
           },
           size: {
-            value: { min: 1, max: 5 }
+            value: { min: 0.2, max: 2 }
           }
         },
         detectRetina: true

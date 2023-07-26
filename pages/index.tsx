@@ -4,7 +4,6 @@ import Image from 'next/image'
 // components
 import ParticlesContainer from '../components/ParticlesContainer'
 import ProjectsBtn from '../components/ProjectsBtn'
-import Avatar from '../components/Avatar'
 
 // framer motion
 import { motion } from 'framer-motion'
@@ -57,24 +56,13 @@ const Home = () => {
         </div>
       </div>
       {/* image */}
-      <div className='w-[1200px] h-full absolute right-0 bottom-0'>
+      <div className='w-full h-full absolute left-0 top-0'>
         {/* bg img */}
         <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right
         xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge
 '/>
         {/* particles */}
         <ParticlesContainer />
-        {/* avatar img */}
-        <motion.div
-          variants={fadeIn('up', 0.5)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          transition={{ duration: 1, ease: 'easeInOut' }}
-          className='max-w-[737px] mx-h-[678px] absolute 
-        bottom-[0px] lg:right-[6%]'>
-          <Avatar />
-        </motion.div>
       </div>
     </div>
   )
