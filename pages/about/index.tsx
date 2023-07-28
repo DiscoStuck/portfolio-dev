@@ -13,8 +13,7 @@ import {
 import {
   SiNextdotjs,
   SiFramer,
-  SiAdobexd,
-  SiAdobephotoshop
+  SiAdobe
 } from 'react-icons/si'
 
 //  data
@@ -32,61 +31,41 @@ const aboutData = [
           <SiNextdotjs />,
           <SiFramer />,
           <FaWordpress />,
+          <SiAdobe />
         ],
       },
+    ],
+  },
+  {
+    title: "Background",
+    info: [
+    ],
+  },
+  {
+    title: "Strengths",
+    info: [
       {
-        title: "UI/UX Design",
-        icons: [<FaFigma />, <SiAdobexd />, <SiAdobephotoshop />],
+        title: "AI",
+        stage: "adfasg",
+      },
+      {
+        title: "Freelancing",
+        stage: "",
+      },
+      {
+        title: "Audiovisual",
+        stage: "",
       },
     ],
   },
   {
-    title: "awards",
+    title: 'More about me',
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
-  {
-    title: "experience",
-    info: [
-      {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
-      },
-      {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
-      },
-      {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
-      },
-    ],
-  },
-  {
-    title: "credentials",
-    info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
-      },
-      {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
-      },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
-    ],
-  },
+        stage: 'My name is Juan (or Juanjo) and I was born in Spain. I always liked traveling, and somehow I ended up living in Danang (Vietnam) with my beautiful girlfriend. On my free time I like to work out, watch movies, play d&d and drink beer with my friends.'
+      }
+    ]
+  }
 ];
 
 // components
@@ -106,18 +85,16 @@ const About = () => {
     <div className='h-full bg-primary/30 py-32 text-center
     xl:text-left'>
       <Circles />
-      <div className='container mx-auto h-full flex flex-col
-      items-center xl:flex-row gap-x-6'>
+      <div className='container mx-auto h-full flex flex-col xl:flex-row gap-x-6 pt-16'>
         {/* text */}
-        <div className='flex-1 flex flex-col justify-center'>
+        <div className='flex-1 flex flex-col'>
           <motion.h2
             variants={fadeIn('right', 0.2)}
             initial='hidden'
             animate='show'
             exit='hidden'
             className='h2'>
-            Captivating <span className='text-accent'>stories</span> birth
-            magnificient designs
+            Self-taught<span className='text-accent'><br /> Developer</span>
           </motion.h2>
           <motion.p
             variants={fadeIn('right', 0.4)}
@@ -125,18 +102,22 @@ const About = () => {
             animate='show'
             exit='hidden'
             className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
-            10 years ago, I began freelancing as a developer. Since then, I've
-            remote work for agencies, consulted for startups, and collaborated
-            on digital products for business and consumer use.
+            Coding is an art that one never finishes learning. Staying up-to-date
+            and continuously improving is essential to remain competitive.
+            Build myself from scratch on my own has provided me with great
+            adaptability and autonomy, and that makes me feel confident that I can
+            do <span className='text-accent'>Anything</span>.
           </motion.p>
         </div>
+        {/* vertical line*/}
+        <div className='h-[300px] border-l-[1px] border-white border-solid mr-8' />
         {/* info */}
         <motion.div
           variants={fadeIn('left', 0.2)}
           initial='hidden'
           animate='show'
           exit='hidden'
-          className='flex flex-col w-full xl:max-w-[48%] h-[480px]'>
+          className='flex flex-col w-full xl:max-w-[48%]'>
           <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
             {aboutData.map((item, itemIndex) => {
               return (
@@ -163,8 +144,8 @@ const About = () => {
                   items-center text-white/60'
                 >
                   {/* title */}
-                  <div className='font-light mb-2 mb:mb-0'>{item.title}</div>
-                  <div className='hidden md:flex'>-</div>
+                  {('title' in item) && <div className='font-light mb-2 mb:mb-0'>{item.title}</div>}
+                  {('title' in item) && <div className='hidden md:flex'>-</div>}
                   <div>{'stage' in item && item.stage}</div>
                   <div className='flex gap-x-4'>
                     {/* icons */}
