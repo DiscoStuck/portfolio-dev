@@ -22,7 +22,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return <div className={`
-  page bg-site text-white bg-cover bg-no-repeat ${sora.variable}
+  page text-white ${sora.variable} bg-primary
   font-sora relative`
   }>
     <TopLeftImg />

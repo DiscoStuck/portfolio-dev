@@ -10,16 +10,17 @@ import { motion } from 'framer-motion'
 
 // variants
 import { fadeIn } from '../variants'
+import Explosion from '../components/Explosion'
 
 
 const Home = () => {
   return (
-    <div className='bg-primary/60 h-full'>
+    <div className='bg-primary h-full'>
       {/* text */}
-      <div className='w-full h-full bg-gradient-to-r from-primary/10
-       via-black/30 to-black/10'>
+      <div className='w-full h-full bg-gradient-to-r from-primary/5
+       via-black/10 to-black/5 relative z-10'>
         <div className='text-center flex flex-col justify-center xl:pt-40
-         xl:text-left h-full container mx-auto'>
+         xl:text-left h-full container mx-auto relative'>
           {/* pretitle */}
           <motion.h2
             variants={fadeIn('down', 0.4)}
@@ -61,16 +62,17 @@ const Home = () => {
           >
             <ProjectsBtn />
           </motion.div>
+          <Explosion />
         </div>
       </div>
       {/* image */}
       <div className='w-full h-full absolute left-0 top-0'>
         {/* bg img */}
-        <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right
-        xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge
-'/>
-        {/* particles */}
-        <ParticlesContainer />
+        <div className='text-center flex flex-col justify-center xl:pt-40
+         xl:text-left h-full container mx-auto relative'>
+          <ParticlesContainer />
+          <Explosion />
+        </div>
       </div>
     </div>
   )
