@@ -2,19 +2,25 @@ import { useState } from 'react'
 
 // icons
 import {
-  FaHtml5,
-  FaCss3,
+  FaCss3Alt,
   FaJs,
   FaReact,
   FaWordpress,
-  FaFigma,
+  FaNodeJs,
+  FaGitAlt,
 } from 'react-icons/fa'
 
 import {
   SiNextdotjs,
-  SiFramer,
-  SiAdobe
+  SiTailwindcss,
+  SiAdobe,
+  SiMongodb,
+  SiPrisma,
 } from 'react-icons/si'
+
+import {
+  FcLinux,
+} from 'react-icons/fc'
 
 //  data
 const aboutData = [
@@ -22,16 +28,19 @@ const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Web Development",
-        icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiNextdotjs />,
-          <SiFramer />,
-          <FaWordpress />,
-          <SiAdobe />
+        icons: [,
+          <FaCss3Alt color='#264de4' />,
+          <FaJs color='#F0DB4F' />,
+          <FaReact color='#61dbfb' />,
+          <FaNodeJs color='#3c873a' />,
+          <SiNextdotjs color='white' />,
+          < SiTailwindcss color='#38BDF8' />,
+          <SiMongodb color='#02B853' />,
+          <SiPrisma color='white' />,
+          <FaGitAlt color='#f34f29' />,
+          <FcLinux />,
+          <FaWordpress color='#00749C' />,
+          <SiAdobe color='#ED2224' />
         ],
       },
     ],
@@ -46,7 +55,7 @@ const aboutData = [
     info: [
       {
         title: "AI",
-        stage: "adfasg",
+        stage: "AI, my mentor, might not be as good as human expert, but is always there for me. I know its strengths and weaknesses, I know how to get the most of if. It has nothing to do with make it generate code, but to learn and solve as efficiently as possible. Anybody who doesn’t use it has great competitive disadvantage over me.",
       },
       {
         title: "Freelancing",
@@ -80,84 +89,85 @@ import CountUp from 'react-countup'
 
 const About = () => {
   const [index, setIndex] = useState(0)
-  console.log(index)
   return (
-    <div className='h-full bg-primary/30 py-32 text-center
+    <div className='h-full w-full text-center
     xl:text-left'>
       <Circles />
-      <div className='container mx-auto h-full flex flex-col xl:flex-row gap-x-6 pt-16'>
-        {/* text */}
-        <div className='flex-1 flex flex-col'>
-          <motion.h2
-            variants={fadeIn('right', 0.2)}
+      <div className='container h-full flex flex-col justify-center mx-auto'>
+        <div className='flex flex-col xl:flex-row gap-x-6 pt-16 pr-28 justify-center'>
+          {/* text */}
+          <div className='flex-1 flex flex-col'>
+            <motion.h2
+              variants={fadeIn('right', 0.2)}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+              className='h2'>
+              Self-taught<span className='text-accent'><br /> Developer</span>
+            </motion.h2>
+            <motion.p
+              variants={fadeIn('right', 0.4)}
+              initial='hidden'
+              animate='show'
+              exit='hidden'
+              className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
+              Coding is an art that one never finishes learning. Staying up-to-date
+              and continuously improving is essential to remain competitive.
+              Build myself from scratch on my own has provided me with great
+              adaptability and autonomy, and that makes me feel confident that I can
+              do <span className='text-accent'>Anything</span>.
+            </motion.p>
+          </div>
+          {/* vertical line*/}
+          <div className='h-[300px] border-l-[1px] border-white border-solid mr-6 ml-4' />
+          {/* info */}
+          <motion.div
+            variants={fadeIn('left', 0.2)}
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='h2'>
-            Self-taught<span className='text-accent'><br /> Developer</span>
-          </motion.h2>
-          <motion.p
-            variants={fadeIn('right', 0.4)}
-            initial='hidden'
-            animate='show'
-            exit='hidden'
-            className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
-            Coding is an art that one never finishes learning. Staying up-to-date
-            and continuously improving is essential to remain competitive.
-            Build myself from scratch on my own has provided me with great
-            adaptability and autonomy, and that makes me feel confident that I can
-            do <span className='text-accent'>Anything</span>.
-          </motion.p>
-        </div>
-        {/* vertical line*/}
-        <div className='h-[300px] border-l-[1px] border-white border-solid mr-8' />
-        {/* info */}
-        <motion.div
-          variants={fadeIn('left', 0.2)}
-          initial='hidden'
-          animate='show'
-          exit='hidden'
-          className='flex flex-col w-full xl:max-w-[48%]'>
-          <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
-            {aboutData.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className={`${index === itemIndex &&
-                    'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
-                    } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px]
+            className='flex flex-col w-full xl:max-w-[48%]'>
+            <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
+              {aboutData.map((item, itemIndex) => {
+                return (
+                  <div
+                    key={itemIndex}
+                    className={`${index === itemIndex &&
+                      'text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300'
+                      } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px]
                   after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                  onClick={() => setIndex(itemIndex)}
-                >
-                  {item.title}
-                </div>
-              )
-            })}
-          </div>
-          <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center
-          xl:items-start'>
-            {aboutData[index].info.map((item, itemIndex) => {
-              return (
-                <div
-                  key={itemIndex}
-                  className='flex-1 flex flex-col md:flex-row max-w-max gap-x-2
-                  items-center text-white/60'
-                >
-                  {/* title */}
-                  {('title' in item) && <div className='font-light mb-2 mb:mb-0'>{item.title}</div>}
-                  {('title' in item) && <div className='hidden md:flex'>-</div>}
-                  <div>{'stage' in item && item.stage}</div>
-                  <div className='flex gap-x-4'>
-                    {/* icons */}
-                    {'icons' in item && item.icons.map((icon, itemIndex) => {
-                      return <div className='text-2xl'>{icon}</div>
-                    })}
+                    onClick={() => setIndex(itemIndex)}
+                  >
+                    {item.title}
                   </div>
-                </div>
-              )
-            })}
-          </div>
-        </motion.div>
+                )
+              })}
+            </div>
+            <div className='py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 items-center
+          xl:items-start'>
+              {aboutData[index].info.map((item, itemIndex) => {
+                return (
+                  <div
+                    key={itemIndex}
+                    className='flex-1 flex flex-col md:flex-row max-w-max
+                  items-center text-white/60'
+                  >
+                    {/* title */}
+                    {('title' in item) && <div className='font-light mb-2 mb:mb-0'>{item.title}</div>}
+                    {('title' in item) && <div className='hidden md:flex'>-</div>}
+                    <div>{'stage' in item && item.stage}</div>
+                    <div className='flex gap-x-6 gap-y-8 flex-wrap'>
+                      {/* icons */}
+                      {'icons' in item && item.icons.map((icon, itemIndex) => {
+                        return <div className='text-6xl'>{icon}</div>
+                      })}
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   )

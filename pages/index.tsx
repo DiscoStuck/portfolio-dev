@@ -3,7 +3,6 @@ import Image from 'next/image'
 
 // components
 import ParticlesContainer from '../components/ParticlesContainer'
-import ProjectsBtn from '../components/ProjectsBtn'
 
 // framer motion
 import { motion } from 'framer-motion'
@@ -11,15 +10,15 @@ import { motion } from 'framer-motion'
 // variants
 import { fadeIn } from '../variants'
 import Explosion from '../components/Explosion'
+import Button from '../components/Button'
 
 
 const Home = () => {
   return (
     <div className='bg-primary h-full'>
       {/* text */}
-      <div className='w-full h-full bg-gradient-to-r from-primary/5
-       via-black/10 to-black/5 relative z-10'>
-        <div className='text-center flex flex-col justify-center xl:pt-40
+      <div className='w-full h-full relative z-10'>
+        <div className='text-center flex flex-col justify-center xl:pt-20
          xl:text-left h-full container mx-auto relative'>
           {/* pretitle */}
           <motion.h2
@@ -51,7 +50,7 @@ const Home = () => {
           </motion.p>
           {/* btn */}
           <div className='flex justify-center xl:hidden'>
-            <ProjectsBtn />
+            <Button text='My Projects' />
           </div>
           <motion.div
             variants={fadeIn('down', 0.4)}
@@ -60,7 +59,7 @@ const Home = () => {
             exit='hidden'
             className='hidden xl:flex'
           >
-            <ProjectsBtn />
+            <Button text='My Projects' textSize={22} />
           </motion.div>
           <Explosion />
         </div>

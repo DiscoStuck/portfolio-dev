@@ -4,7 +4,7 @@ import Image from "next/image";
 const Explosion = () => {
     return (
         <div
-            className="absolute -right-14 bottom-0 duration-75 -z-10 mix-blend-screen "
+            className="absolute -right-16 bottom-0 duration-75 -z-10 mix-blend-screen "
         >
             <Image
                 src={"/explosion-transparent.png"}

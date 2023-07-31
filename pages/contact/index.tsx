@@ -1,6 +1,3 @@
-// components
-import Circles from '../../components/Circles'
-
 // Icons
 import { BsArrowRight } from 'react-icons/bs'
 
@@ -10,12 +7,15 @@ import { motion } from 'framer-motion'
 // variants
 import { fadeIn } from '../../variants'
 
+// button
+import Button from '../../components/Button';
+
 
 const Contact = () => {
   return (
-    <div className='h-full bg-primary/30'>
+    <div className='h-full'>
       <div className='container mx-auto py-32 text-center xl:text-left flex
-      items-center justify-center h-full'>
+      items-center justify-center h-full relative'>
         {/* text & form */}
         <div>
           {/* text */}
@@ -33,17 +33,7 @@ const Contact = () => {
             </div>
             <input type='text' placeholder='subject' className='input' />
             <textarea placeholder='message' className='textarea'></textarea>
-            <button className='btn rounded-full border border-white/50 max-w-[170px]
-            px-8 transition-all duration-300 flex items items-center justify-center
-            overflow-hidden hover:border-accent group'>
-              <span className='group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all
-              duration-500'>
-                Let's talk
-              </span>
-              <BsArrowRight className='-translate-y-[120%] opacity-0 group-hover:flex
-              group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300
-              absolute text-[22px]'/>
-            </button>
+            <Button text="Let's talk" paddingY={4} />
           </motion.form>
         </div>
       </div>
