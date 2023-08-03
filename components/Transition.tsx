@@ -6,39 +6,36 @@ import { motion } from 'framer-motion'
 //variants
 const transitionVariants = {
   initial: {
-    x: '100%',
-    width: '100%'
+    y: '0%',
   },
   animate: {
-    x: '0%',
-    width: '0%'
+    y: '-110%',
   },
   exit: {
-    x: ['0%', '100%'],
-    width: ['0%', '100%']
+    y: ['-110%', '0%'],
   }
 }
 
 const Transition = () => {
   return (
     <>      <motion.div
-      className='fixed top-0 bottom-0 right-full w-screen z-10 bg-[#4b3792]'
+      className='fixed h-full w-screen z-30 bg-[#4b3792]'
       initial='initial'
       exit='exit'
       variants={transitionVariants}
       animate='animate'
-      transition={{ delay: 0.2, duration: 0.6, ease: 'easeInOut' }}
+      transition={{ delay: 0.4, duration: 0.6, ease: 'easeInOut' }}
     />
       <motion.div
-        className='fixed top-0 bottom-0 right-full w-screen z-20 bg-[#3b2d71]'
+        className='fixed h-full w-screen z-40 bg-[#3b2d71]'
         initial='initial'
         exit='exit'
         variants={transitionVariants}
         animate='animate'
-        transition={{ delay: 0.2, duration: 0.6, ease: 'easeInOut' }}
+        transition={{ delay: 0.3, duration: 0.6, ease: 'easeInOut' }}
       />
       <motion.div
-        className='fixed top-0 bottom-0 right-full w-screen z-30 bg-[#2e2257]'
+        className='fixed h-full z-50 w-screen bg-[#2e2257]'
         initial='initial'
         exit='exit'
         variants={transitionVariants}

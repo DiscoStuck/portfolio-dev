@@ -1,10 +1,14 @@
 // next image
 import Image from "next/image";
 
-const Explosion = () => {
+type ExplosionProps = {
+    className: String
+}
+
+const Explosion = ({ className }: ExplosionProps) => {
     return (
         <div
-            className="absolute -right-16 bottom-0 duration-75 -z-10 mix-blend-screen "
+            className={`absolute -z-10 mix-blend-screen ${className}`}
         >
             <Image
                 src={"/explosion-transparent.png"}

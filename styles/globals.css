@@ -18,6 +18,19 @@
   color: #f13024;
 }
 
+/* Swiper styles */
+span.swiper-pagination-bullet.swiper-pagination-bullet-active  {
+  background-color: #FFB303 !important;
+  opacity: 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+span.swiper-pagination-bullet.swiper-pagination-bullet {
+    width: 12px !important;
+      height: 12px !important;
+}
+
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
