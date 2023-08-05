@@ -9,11 +9,9 @@ import 'swiper/css/pagination'
 // swiper modules
 import { Pagination } from 'swiper'
 
-// icons
-import { MdScreenSearchDesktop } from 'react-icons/md'
-
-// next image
-import Image from 'next/image'
+// components
+import ProjectElement from './ProjectElement'
+import { useEffect, useState } from 'react'
 
 // data
 const workSlidesData = [
@@ -35,54 +33,61 @@ const workSlidesData = [
     }
 ]
 
-// swiper styles
-const swiperStyles = {
-    "--swiper-pagination-color": "#FFB303",
-    "--swiper-pagination-bullet-inactive-color": "gray",
-    "--swiper-pagination-bullet-inactive-opacity": "0.5",
-    "--swiper-pagination-bullet-size": "10px",
-    "--swiper-pagination-bullet-horizontal-gap": "5px",
-};
-const castedSwiperStyles = swiperStyles as any
+type WorkSliderProps = {
+    showModal: boolean
+    pathModal: string
+    openModal: (arg0: string) => void
+}
 
-const WorkSlider = () => {
+
+const WorkSlider = ({ showModal, pathModal, openModal }: WorkSliderProps) => {
+    const [showSlider, setShowSlider] = useState(false);
+
+
+    useEffect(() => {
+        const handleResize = () => {
+            setShowSlider(window.innerWidth >= 1200); // Change the breakpoint as needed
+        };
+
+        handleResize(); // Check initial screen size
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+
     return (
-        <Swiper
-            spaceBetween={30}
-            slidesPerView={2}
-            pagination={{ clickable: true }}
-            modules={[Pagination]}
-            className='xl:h-[340px] sm:h-[480px] w-full'
-        >
-            {workSlidesData.map((slide, index) => {
-                return <SwiperSlide>
-                    <div key={index} className='relative rounded-lg
-                  overflow-hidden flex items-center justify-center
-                  group cursor-pointer'>
-                        <div className='flex items-center justify-center relative
-                    overflow-hidden group'>
-                            {/* image */}
-                            <Image src={slide?.path} width={750} height={450} alt='' />
-                            {/* overlay gradient */}
-                            <div className='absolute inset-0 bg-primary -to-l opacity-0 group-hover:opacity-60
-                      transition-all duration-700'></div>
-                            {/* title */}
-
-                            <div className='absolute bottom-0 translate-y-full group-hover:-translate-y-1/2
-                      group-hover:xl:-translate-y-[100px] transition-all duration-300'>
-                                <div className='flex flex-col items-center gap-x-2 text-[24px] tracking-[0.2em]'>
-                                    {/* icons */}
-                                    <div className='text-5xl  
-                          transition-all duration-300 delay-100'><MdScreenSearchDesktop /></div>
-                                    {/* title 1 */}
-                                    <div className='delay-200 duration-300 translate-y-[500%] group-hover:translate-y-0'>Details</div>
-                                </div>
-                            </div>
-                        </div>
+        <div>
+            {showSlider ? (
+                <Swiper
+                    spaceBetween={30}
+                    slidesPerView={2}
+                    pagination={{ clickable: true }}
+                    modules={[Pagination]}
+                    className='xl:h-[340px] sm:h-[480px] w-full '
+                >
+                    {workSlidesData.map((slide, index) => {
+                        return (
+                            <SwiperSlide >
+                                <ProjectElement path={slide?.path} key={index} onClick={() => openModal(slide?.path)} />
+                            </SwiperSlide>
+                        )
+                    })}
+                </Swiper>
+            )
+                : (
+                    <div className='grid lg:grid-cols-2 grid-cols-1 gap-x-8 gap-y-12 mt-8'>
+                        {workSlidesData.map((slide, index) => {
+                            return <ProjectElement path={slide?.path} key={index}
+                                onClick={() => openModal(slide?.path)}
+                            />
+                        })}
                     </div>
-                </SwiperSlide>
-            })}
-        </Swiper>
+                )
+            }
+        </div>
     );
 }
 

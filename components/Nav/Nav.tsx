@@ -28,15 +28,15 @@ import { useRouter } from 'next/router'
 const Nav = () => {
   const router = useRouter()
   const pathname = router.pathname
-  return <div className="flex justify-center absolute h-full w-full">
+  return <div className="flex justify-center fixed z-50 h-full w-full pointer-events-none">
     <div className="xl:container h-full w-full flex justify-end">
       <nav className='flex flex-col items-center xl:justify-center
   gap-y-4 h-max bottom-0 mt-auto xl:right-[2%] x-50 w-full
   xl:w-16 xl:max-w-md xl:h-screen z-50 pt-20'>
         {/* inner */}
         <div className='flex w-full xl:flex-col items-center justify-between 
-    xl:justify-around px-8 md:px-40 xl:px-0 h-[80px] xl:h-[400px] py-8
-    bg-white/10  shadow-md backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full'>
+    xl:justify-around px-[10%] md:px-40 xl:px-0 h-[80px] xl:h-[400px] py-8
+    bg-white/10  shadow-md backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full pointer-events-auto'>
           {navData.map((link, index) => {
             return <Link
               className={`${link.path === pathname && 'text-accent'}

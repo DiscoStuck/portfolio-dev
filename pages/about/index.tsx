@@ -184,13 +184,13 @@ const renderSwitch = (index: Number) => {
 const About = () => {
   const [index, setIndex] = useState(0)
   return (
-    <div className='h-full w-full text-center
-    xl:text-left'>
+    <div className='xl:h-full w-full text-center
+    xl:text-left padding-page pb-[100px] xl:pb-0 xl:mt-0 overflow-y-auto'>
       <Circles />
-      <div className='container h-full flex flex-col justify-center mx-auto'>
-        <div className='flex flex-col xl:flex-row gap-x-6 pt-16 pr-28 justify-center'>
+      <div className='container h-full flex flex-col justify-center mx-auto overflow-y-auto'>
+        <div className='flex flex-col xl:flex-row gap-x-6 gap-y-4 xl:pr-28 justify-center items-center xl:items-start'>
           {/* text */}
-          <div className='flex-1 flex flex-col'>
+          <div className='flex-1 flex flex-col gap-y-5 xl:gap-y-0'>
             <motion.h2
               variants={fadeIn('right', 0.2)}
               initial='hidden'
@@ -204,7 +204,7 @@ const About = () => {
               initial='hidden'
               animate='show'
               exit='hidden'
-              className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'>
+              className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-center xl:text-start'>
               Coding is an art that one never finishes learning. Staying up-to-date
               and continuously improving is essential to remain competitive.
               Build myself from scratch on my own has provided me with great
@@ -213,14 +213,14 @@ const About = () => {
             </motion.p>
           </div>
           {/* vertical line*/}
-          <div className='h-[300px] border-l-[1px] border-white border-solid mr-6 ml-4' />
+          <div className='xl:h-[300px] xl:border-l-[1px] border-white border-solid mr-6 ml-4' />
           {/* info */}
           <motion.div
             variants={fadeIn('left', 0.2)}
             initial='hidden'
             animate='show'
             exit='hidden'
-            className='flex flex-col w-full xl:max-w-[48%]'>
+            className='flex flex-col md:gap-y-6 xl:gap-y-0 w-full md:max-w-[500px] xl:max-w-[48%]'>
             <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'>
               {aboutData.map((item, itemIndex) => {
                 return (

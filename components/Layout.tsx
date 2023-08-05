@@ -9,8 +9,8 @@ const sora = Sora({
 })
 
 // import components
-import Nav from './Nav'
-import Header from './Header'
+import Nav from './Nav/Nav'
+import Header from './Nav/Header'
 import TopLeftImg from './TopLeftImg'
 import React from 'react'
 
@@ -21,15 +21,14 @@ type LayoutProps = {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  return <div className={`
-  page text-white ${sora.variable} bg-primary
+  return <div className={` page text-white ${sora.variable} bg-primary
   font-sora`
   }>
     <TopLeftImg />
     <Nav />
     <Header />
     {children}
-  </div>;
+  </div>
 };
 
 export default Layout;

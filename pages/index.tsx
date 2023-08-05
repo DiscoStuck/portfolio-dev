@@ -2,7 +2,7 @@
 import Image from 'next/image'
 
 // components
-import ParticlesContainer from '../components/ParticlesContainer'
+import ParticlesContainer from '../components/Home/ParticlesContainer'
 
 // framer motion
 import { motion } from 'framer-motion'
@@ -15,11 +15,11 @@ import Button from '../components/Button'
 
 const Home = () => {
   return (
-    <div className='bg-primary h-full'>
+    <div className='bg-primary h-full pt-[30vh] xl:pt-0'>
       {/* text */}
-      <div className='w-full h-full relative z-10'>
-        <div className='text-center flex flex-col justify-center xl:pt-20
-         xl:text-left h-full container mx-auto relative items-center xl:items-start'>
+      <div className='h-full w-full relative z-10'>
+        <div className='h-full text-center flex flex-col justify-center xl:pt-20
+         xl:text-left container mx-auto relative items-center xl:items-start'>
           {/* pretitle */}
           <motion.h2
             variants={fadeIn('down', 0.4)}
@@ -61,7 +61,7 @@ const Home = () => {
           >
             <Button text='My Projects' textSize={22} />
           </motion.div>
-          <Explosion className='xl:-right-16 -right-96 bottom-0 hidden xl:block' />
+          <Explosion className='xl:-right-16 -right-96 bottom-0 hidden xl:block z-20' />
         </div>
       </div>
       {/* image */}
@@ -69,6 +69,7 @@ const Home = () => {
         {/* bg img */}
         <div className='text-center flex flex-col justify-center xl:pt-40
          xl:text-left h-full container mx-auto relative'>
+          
           <ParticlesContainer />
         </div>
       </div>

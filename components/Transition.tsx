@@ -9,10 +9,10 @@ const transitionVariants = {
     y: '0%',
   },
   animate: {
-    y: '-110%',
+    y: '-125%',
   },
   exit: {
-    y: ['-110%', '0%'],
+    y: ['-125%', '0%'],
   }
 }
 
