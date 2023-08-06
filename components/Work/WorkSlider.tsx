@@ -1,3 +1,5 @@
+import { workData } from "../../data/workData";
+
 // swiper react components
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -11,37 +13,27 @@ import { Pagination } from 'swiper'
 
 // components
 import ProjectElement from './ProjectElement'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+import ProjectModal from '../../components/Work/ProjectModal'
 
-// data
-const workSlidesData = [
-    {
-        title: 'title',
-        path: "/thumb1.jpg"
-    },
-    {
-        title: 'title',
-        path: "/thumb2.jpg"
-    },
-    {
-        title: 'title',
-        path: "/thumb3.jpg"
-    },
-    {
-        title: 'title',
-        path: "/thumb4.jpg"
-    }
-]
-
-type WorkSliderProps = {
-    showModal: boolean
-    pathModal: string
-    openModal: (arg0: string) => void
+// types
+export type Project = {
+    title: string
+    image: string
+    description: string
+    stack: string[]
 }
 
-
-const WorkSlider = ({ showModal, pathModal, openModal }: WorkSliderProps) => {
+const WorkSlider = () => {
     const [showSlider, setShowSlider] = useState(false);
+    const [showModal, setShowModal] = useState(false)
+    const [projectModal, setProjectModal] = useState(workData[0])
+
+    const openModal = useCallback((project: Project) => {
+        setShowModal(true)
+        setProjectModal(project)
+    }, [])
+
 
 
     useEffect(() => {
@@ -60,6 +52,7 @@ const WorkSlider = ({ showModal, pathModal, openModal }: WorkSliderProps) => {
 
     return (
         <div>
+            <ProjectModal isOpen={showModal} project={projectModal} onClose={() => setShowModal(false)} />
             {showSlider ? (
                 <Swiper
                     spaceBetween={30}
@@ -68,10 +61,10 @@ const WorkSlider = ({ showModal, pathModal, openModal }: WorkSliderProps) => {
                     modules={[Pagination]}
                     className='xl:h-[340px] sm:h-[480px] w-full '
                 >
-                    {workSlidesData.map((slide, index) => {
+                    {workData.map((slide, index) => {
                         return (
                             <SwiperSlide >
-                                <ProjectElement path={slide?.path} key={index} onClick={() => openModal(slide?.path)} />
+                                <ProjectElement project={slide} key={index} openModal={openModal} />
                             </SwiperSlide>
                         )
                     })}
@@ -79,10 +72,8 @@ const WorkSlider = ({ showModal, pathModal, openModal }: WorkSliderProps) => {
             )
                 : (
                     <div className='grid lg:grid-cols-2 grid-cols-1 gap-x-8 gap-y-12 mt-8'>
-                        {workSlidesData.map((slide, index) => {
-                            return <ProjectElement path={slide?.path} key={index}
-                                onClick={() => openModal(slide?.path)}
-                            />
+                        {workData.map((slide, index) => {
+                            return <ProjectElement project={slide} key={index} openModal={openModal} />
                         })}
                     </div>
                 )

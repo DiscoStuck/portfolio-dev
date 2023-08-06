@@ -98,7 +98,7 @@ const aboutData = [
     title: "skills",
     info: [
       {
-        icons: [,
+        icons: [
           <FaCss3Alt color='#264de4' />,
           <FaJs color='#F0DB4F' />,
           <FaReact color='#61dbfb' />,

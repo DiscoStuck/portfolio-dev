@@ -4,20 +4,22 @@ import Image from "next/image";
 // icons
 import { MdScreenSearchDesktop } from "react-icons/md";
 
+// types
+import { Project } from "./WorkSlider";
 type ProjectElementProps = {
-    path: string
-    onClick: () => void
+    project: Project
+    openModal: (arg0: Project) => void
 }
 
-const ProjectElement = ({ path, onClick }: ProjectElementProps) => {
+const ProjectElement = ({ openModal, project }: ProjectElementProps) => {
     return (
-        <div onClick={onClick} className='rounded-lg
+        <div onClick={() => openModal(project)} className='rounded-lg
                   overflow-hidden flex items-center justify-center
                   group cursor-pointer'>
             <div className='flex items-center justify-center relative
                     overflow-hidden group h-full'>
                 {/* image */}
-                <Image src={path} width={750} height={450} alt='' />
+                <Image src={project?.image} width={750} height={450} alt='' />
                 {/* overlay gradient */}
                 <div className='absolute h-full inset-0 bg-primary -to-l opacity-0 group-hover:opacity-60
                       transition-all duration-700'></div>
