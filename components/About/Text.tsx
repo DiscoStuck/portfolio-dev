@@ -9,12 +9,12 @@ type TextProps = {
 
 const Text = ({ text }: TextProps) => {
     return (
-        <div>
+        <div className="flex flex-col gap-y-4 text-left">
             {text.map(block => {
                 return (
                     <div>
                         {'title' in block && <div className="font-bold text-white  ">{block.title}</div>}
-                        {'content' in block && <div className="mb-6">{block.content}</div>}
+                        {'content' in block && <div>{block.content}</div>}
                     </div>
                 )
             })}

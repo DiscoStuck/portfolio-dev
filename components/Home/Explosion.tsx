@@ -12,8 +12,8 @@ const Explosion = ({ className }: ExplosionProps) => {
         >
             <Image
                 src={"/explosion-transparent.png"}
-                width={800}
-                height={800 * 0.75}
+                width={700}
+                height={700 * 0.75}
                 className="w-full h-full mix-blend-exclusion"
                 alt=""
             />

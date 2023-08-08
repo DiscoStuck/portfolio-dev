@@ -20,6 +20,7 @@ import ProjectModal from '../../components/Work/ProjectModal'
 export type Project = {
     title: string
     image: string
+    website: string
     description: string
     stack: string[]
 }

@@ -1,32 +1,22 @@
 // links
 import Link from 'next/link'
 
-// icons
-import {
-  RiYoutubeLine, RiInstagramLine, RiFacebookLine, RiDribbbleLine, RiBehanceLine,
-  RiPinterestLine
-} from 'react-icons/ri'
+import { SiLinkedin, SiExercism, SiFreelancer, SiTwitter } from 'react-icons/si';
 
 const Socials = () => {
   return (
     <div className='flex items-center gap-x-5 text-lg'>
       <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiYoutubeLine />
+        <SiLinkedin />
       </Link>
       <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiInstagramLine />
+        <SiTwitter />
       </Link>
       <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiFacebookLine />
+        <SiExercism />
       </Link>
       <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiDribbbleLine />
-      </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiBehanceLine />
-      </Link>
-      <Link href={''} className='hover:text-accent transition-all duration-300'>
-        <RiPinterestLine />
+        <SiFreelancer />
       </Link>
     </div>
   )

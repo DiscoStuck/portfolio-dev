@@ -38,6 +38,7 @@ module.exports = {
       fontFamily: {
         poppins: [`var(--font-poppins)`, "sans-serif"],
         sora: [`var(--font-sora)`, "sans-serif"],
+        black_ops_one: [`var(--font-black_ops_one)`, "sans-serif"],
       },
     },
   },

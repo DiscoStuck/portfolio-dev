@@ -4,6 +4,9 @@ import { Dialog } from "@headlessui/react";
 // next
 import Image from "next/image";
 
+// icons
+import { TbWorldShare } from 'react-icons/tb'
+
 // components
 import IconComponent from "../IconComponent";
 
@@ -15,32 +18,53 @@ type ProjectModalProps = {
     onClose: () => void
 }
 
+// utils
+import { openInNewTab } from "../../utils";
+import ClosingCross from "../ClosingCross";
+
 const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
     return (
         <div>
             <Dialog className="relative z-50" open={isOpen} onClose={onClose}>
                 <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" aria-hidden="true" />
                 <div className="fixed inset-0 overflow-y-auto flex flex-col justify-center items-center">
-                    <Dialog.Panel className="mx-auto w-[600px] xl:h-[600px] rounded-xl bg-primary flex
-                     flex-col items-center overflow-auto  p-8 border-2 border-gray-600 text-gray-200">
-                        <Image src={project.image} alt='' width={600} height={600 * 9 / 16} className="rounded-lg" />
-                        <div className="mt-8 flex gap-10">
-                            <div className="flex-1">
-                                <Dialog.Title>
-                                    <h2 className='text-2xl mb-4 text font-semibold text-accent'>
+                    <Dialog.Panel className="mx-auto w-[600px] xl:max-h-[650px] rounded-xl bg-primary flex
+                     flex-col items-center overflow-auto  p-8 border-2 border-gray-600 text-gray-200 relative">
+                        <div className="relative group overflow-hidden cursor-pointer" onClick={() => openInNewTab(project.website)}>
+                            <Image src={project.image} alt='' width={600} height={600 * 9 / 16} className="rounded-lg rounded-br-none shadow-inner relative group:hover:blur-sm" />
+                            <div className='absolute h-full inset-0 bg-primary -to-l opacity-0 group-hover:opacity-60
+                            transition-all duration-700'></div>
+                            <div className='absolute inset-0 h-full '>
+                                <div className='h-full  gap-x-2 text-[24px] tracking-[0.2em] 
+                                    group-hover:translate-y-0 translate-y-full transition-all duration-300 flex flex-col justify-center items-center'>
+                                    {/* icons */}
+                                    <div className='text-5xl  
+                                    transition-all duration-300 delay-100'><TbWorldShare /></div>
+                                    {/* title 1 */}
+                                    <div className='delay-200 duration-300 group-hover:translate-y-0'>Visit</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-4">
+                            <div className="flex mb-4  border-b-2 border-gray-600">
+                                <Dialog.Title className="flex-1 h-full items-center ">
+                                    <h2 className='text-3xl text font-semibold text-accent h-14 flex items-center px-4'>
                                         {project.title}
                                     </h2>
                                 </Dialog.Title>
+                                <div className="h-14 px-4 flex text-3xl gap-x-4 items-center self-end">
+                                    {project.stack.map(name => {
+                                        return <IconComponent name={name} />
+                                    })}
+                                </div>
+                            </div>
+                            <div>
                                 <Dialog.Description className='text-gray-200'>
                                     {project.description}
                                 </Dialog.Description>
                             </div>
-                            <div className="h-full w-10 flex flex-col items-center text-3xl gap-4 pt-4">
-                                {project.stack.map(name => {
-                                    return <IconComponent name={name} />
-                                })}
-                            </div>
                         </div>
+                        <ClosingCross className="absolute right-3 top-3 z-50" onClick={onClose} />
                     </Dialog.Panel>
                 </div>
             </Dialog>
