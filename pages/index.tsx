@@ -36,7 +36,7 @@ const Home = () => {
             {/* subtitle */}
             <p
               className='max-w-sm md:max-w-md xl:max-w-xl mx-6 xl:mx-0 mb-10 xl:mb-16 text-base  md:text-xl'>
-              I want to make others feel the user experience that I would like to have.
+              I want to make others have the user experience that I enjoy.
               Help them get the information they need. Create the solution they have been looking for.
             </p>
             {/* btn */}

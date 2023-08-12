@@ -20,19 +20,19 @@ const renderSwitch = (index: Number) => {
   switch (index) {
     case 0:
       return <OpacityTransition>
-        <Skills skills={skillsIcons} />
+        <Skills skills={skillsIcons} key={`content-${index}`} />
       </OpacityTransition>
     case 1:
       return <OpacityTransition>
-        <Text text={background} />
+        <Text text={background} key={`content-${index}`} />
       </OpacityTransition>
     case 2:
       return <OpacityTransition>
-        <Accordion text={strengths} />
+        <Accordion text={strengths} key={`content-${index}`} />
       </OpacityTransition>
     case 3:
       return <OpacityTransition>
-        <Text text={moreAboutMe} />
+        <Text text={moreAboutMe} key={`content-${index}`} />
       </OpacityTransition>
   }
 }
@@ -50,11 +50,7 @@ const About = () => {
               Self-taught<span className='text-accent'><br /> Developer</span>
             </h2>
             <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-center xl:text-start'>
-              Coding is an art that one never finishes learning. Staying up-to-date
-              and continuously improving is essential to remain competitive.
-              Build myself from scratch on my own has provided me with great
-              adaptability and autonomy, and that makes me feel confident that I can
-              do <span className='text-accent'>Anything</span>.
+              Coding is an evolving art that requires continuous learning. Staying up-to-date and continuously improving is essential to remain competitive. Build myself from scratch as a developer has provided me with great adaptability, autonomy, and the confidence to overcome every challenge I face.
             </p>
           </div>
           {/* vertical line*/}
@@ -67,7 +63,7 @@ const About = () => {
               {aboutSections.map((item, itemIndex) => {
                 return (
                   <div
-                    key={itemIndex}
+                    key={`menu-${itemIndex}`}
                     className={`${index === itemIndex &&
                       'text-accent xl:after:w-[100%] xl:after:bg-accent xl:after:transition-all xl:after:duration-300'
                       } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px]
@@ -82,7 +78,6 @@ const About = () => {
             <hr className='xl:hidden' />
             <div className='relative py-2 xl:py-6 flex flex-col gap-y-2 xl:gap-y-4 '>
               <div
-                key={index}
                 className='flex-1 flex flex-col md:flex-row max-w-max
                  text-white/60'
               >

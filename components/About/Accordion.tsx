@@ -14,9 +14,9 @@ const Accordion = ({ text }: AccordionProps) => {
     const [selected, setSelected] = useState('AI')
     return (
         <div className="flex flex-col gap-y-4">
-            {text.map(block => {
+            {text.map((block, index) => {
                 return (
-                    <div>
+                    <div key={`accordionIndex-${index}`}>
                         {block && <div className={` ${selected === block.title ?
                             'text-accent' :
                             'text-white'

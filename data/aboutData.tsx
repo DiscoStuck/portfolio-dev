@@ -23,12 +23,7 @@ import {
 export const strengths = [
   {
     title: 'AI',
-    content: "AI, my mentor, might not be as good as human expert, " +
-      "but is always there for me. I know its strengths and weaknesses, " +
-      "I know how to get the most of if. It has nothing to do with make " +
-      "it generate code, but to learn and solve as efficiently as " +
-      "possible. Anybody who doesn’t use it has great competitive " +
-      "disadvantage over me.",
+    content: '“AI won’t take your job as a programmer. Programmers that know how to use AI will”. AI has been my mentor. I know it’s strengths and weaknesses and am always up-to-date with the last developments.',
   },
   {
     title: 'High Standards',
@@ -39,7 +34,7 @@ export const strengths = [
   {
     title: 'Graphics and media background',
     content: 'Working with photo and video for many years has given me a ' +
-      'strong foundation in color, composition, technical knowledge, etc.'
+      'strong foundation in color, composition and technical knowledge.'
   }
 ]
 
@@ -86,4 +81,4 @@ export const certifications = [
   'FullStack Open Typescript'
 ]
 
-export const aboutSections = ['Skills', , 'Background', 'Strengths', 'About Me']
+export const aboutSections = ['Skills', 'Background', 'Strengths', 'About Me']

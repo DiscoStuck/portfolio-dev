@@ -1,30 +1,30 @@
 export const workData = [
     {
-        title: 'Title',
-        image: "/thumb3.jpg",
+        title: 'Spacebnb',
+        image: "/projects/spacebnb.png",
         website: '#',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+        description: 'Space-themed property rental web app. Find the best place to spend your holidays anywhere in the galaxy. This project is based in the one created by Code with Antonio in this course.',
         stack: ['next', 'tailwind', 'mongo', 'prisma']
     },
         {
-        title: 'Title',
-        image: "/thumb3.jpg",
+        title: 'Messenger clone',
+        image: "/projects/messenger.png",
         website: '#',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        stack: ['next', 'tailwind', 'mongo', 'prisma']
+            description: 'Fully functional clone of the popular web app. This project is based in the one created by Code with Antonio in this course.',
+            stack: ['next', 'tailwind', 'mongo', 'prisma']
     },
         {
-        title: 'Title',
-        image: "/thumb3.jpg",
+        title: 'Planeta Gratis',
+        image: "/projects/planeta-gratis.png",
         website: '#',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        stack: ['next', 'tailwind', 'mongo', 'prisma']
+        description:'Directory of websites with free resources. Built using WordPress and Elementor before learning coding.' ,
+        stack: ['wordpress']
     },
             {
-        title: 'Title',
-        image: "/thumb3.jpg",
+        title: 'Edimode',
+        image: "/projects/edimode.png",
         website: '#',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        stack: ['next', 'tailwind', 'mongo', 'prisma']
+        description: 'Website of the MVP for an online business of product photography editing. Built using WordPress and Elementor before learning coding.',
+        stack: ['wordpress']
     },
 ]
