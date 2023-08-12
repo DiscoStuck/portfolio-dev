@@ -41,7 +41,7 @@ const Home = () => {
             </p>
             {/* btn */}
             <Link href='/work' className='flex justify-center xl:justify-normal'>
-              <Button text='My Projects' className='text-4xl' />
+              <Button text='My Projects' className='text-4xl relative z-40' />
             </Link>
           </motion.div>
           {/* image */}
