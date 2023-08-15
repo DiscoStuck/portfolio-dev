@@ -66,6 +66,22 @@ span.swiper-pagination-bullet.swiper-pagination-bullet {
 box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.2);
 }
 
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid #FFB303;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #131424 inset;
+  background-color: transparent;
+}
+
 @layer base {
   body {
     @apply bg-secondary overflow-y-auto overflow-x-hidden xl:overflow-hidden leading-relaxed;
@@ -87,14 +103,14 @@ box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.2);
     @apply h-[52px];
   }
   .input {
-    @apply w-full h-[52px] rounded-lg pl-6 capitalize;
+    @apply w-full h-[52px] rounded-lg px-6;
   }
   .input,
   .textarea {
     @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
   }
   .textarea {
-    @apply w-full h-[180px] p-6 capitalize rounded-lg resize-none;
+    @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
   .nav-icon {
    @apply h-[24px] w-[24px] group-hover:scale-125;
