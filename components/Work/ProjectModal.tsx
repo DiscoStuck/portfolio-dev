@@ -32,16 +32,15 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                      flex-col items-center overflow-auto  p-8 border-2 border-gray-600 text-gray-200 relative">
                         <div className="relative group overflow-hidden cursor-pointer" onClick={() => openInNewTab(project.website)}>
                             <Image src={project.image} alt='' width={600} height={600 * 9 / 16} className="rounded-lg shadow-inner relative group:hover:blur-sm" />
-                            <div className='absolute h-full inset-0 bg-primary -to-l opacity-0 group-hover:opacity-60
+                            <div className='absolute h-full inset-0 bg-primary opacity-0 xl:group-hover:opacity-60
                             transition-all duration-700'></div>
                             <div className='absolute inset-0 h-full '>
-                                <div className='h-full  gap-x-2 text-[24px] tracking-[0.2em] 
-                                    group-hover:translate-y-0 translate-y-full transition-all duration-300 flex flex-col justify-center items-center'>
-                                    {/* icons */}
-                                    <div className='text-5xl
-                                    transition-all duration-300 delay-100'><TbWorldShare /></div>
-                                    {/* title 1 */}
-                                    <div className='delay-200 duration-300 group-hover:translate-y-0'>Visit</div>
+                                <div className='h-full gap-x-2 text-[24px] tracking-[0.2em] 
+                                    xl:group-hover:translate-y-0 xl:translate-y-full transition-all duration-300 flex flex-col justify-center items-center'>
+                                    <div className=" bg-primary xl:bg-transparent flex flex-col items-center justify-center rounded-full w-[70px] h-[70px] sm:w-[90px] sm:h-[90px]">
+                                        {/* icons */}
+                                        <div className=' text-3xl sm:text-5xl xl:text-7xl'><TbWorldShare /></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

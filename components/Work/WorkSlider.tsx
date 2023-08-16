@@ -74,7 +74,12 @@ const WorkSlider = () => {
                 : (
                     <div className='grid lg:grid-cols-2 grid-cols-1 gap-x-8 gap-y-12 mt-8'>
                         {workData.map((slide, index) => {
-                            return <ProjectElement project={slide} key={index} openModal={openModal} />
+                            return (
+                                <div>
+                                    <h2 className="mb-2 px-[5px] first-letter:text-accent">{slide.title}<hr /></h2>
+                                    <ProjectElement project={slide} key={index} openModal={openModal} />
+                                </div>
+                            )
                         })}
                     </div>
                 )
