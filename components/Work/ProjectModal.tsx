@@ -37,7 +37,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                             <div className='absolute inset-0 h-full '>
                                 <div className='h-full gap-x-2 text-[24px] tracking-[0.2em] 
                                     xl:group-hover:translate-y-0 xl:translate-y-full transition-all duration-300 flex flex-col justify-center items-center'>
-                                    <div className=" bg-primary xl:bg-transparent flex flex-col items-center justify-center rounded-full w-[70px] h-[70px] sm:w-[90px] sm:h-[90px]">
+                                    <div className=" bg-primary bg-opacity-80 xl:bg-transparent flex flex-col items-center justify-center rounded-full w-[70px] h-[70px] sm:w-[90px] sm:h-[90px]">
                                         {/* icons */}
                                         <div className=' text-3xl sm:text-5xl xl:text-7xl'><TbWorldShare /></div>
                                     </div>
