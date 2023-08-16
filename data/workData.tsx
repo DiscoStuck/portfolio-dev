@@ -17,14 +17,14 @@ export const workData = [
         title: 'Planeta Gratis',
         image: "/projects/planeta-gratis.png",
         website: 'https://planetagratis.com/',
-        description: 'Directory of websites with free resources. Built using WordPress and Elementor before learning coding.',
+        description: <p>Directory of websites with free resources. Built using WordPress and Elementor before learning coding.</p>,
         stack: ['wordpress']
     },
     {
         title: 'Edimode',
         image: "/projects/edimode.png",
         website: 'https://edimode.com/',
-        description: 'Website of the MVP for an online business of product photography editing. Built using WordPress and Elementor before learning coding.',
+        description: <p>'Website of the MVP for an online business of product photography editing. Built using WordPress and Elementor before learning coding.</p>,
         stack: ['wordpress']
     },
 ]

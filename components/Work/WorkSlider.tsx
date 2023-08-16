@@ -21,7 +21,7 @@ export type Project = {
     title: string
     image: string
     website: string
-    description: string
+    description: JSX.Element
     stack: string[]
 }
 
