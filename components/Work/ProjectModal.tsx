@@ -31,7 +31,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                     <Dialog.Panel className="mx-auto max-w-[650px] w-full rounded-xl bg-primary flex
                      flex-col items-center overflow-auto  p-8 border-2 border-gray-600 text-gray-200 relative">
                         <div className="relative group overflow-hidden cursor-pointer" onClick={() => openInNewTab(project.website)}>
-                            <Image src={project.image} alt='' width={600} height={600 * 9 / 16} className="rounded-lg rounded-br-none shadow-inner relative group:hover:blur-sm" />
+                            <Image src={project.image} alt='' width={600} height={600 * 9 / 16} className="rounded-lg shadow-inner relative group:hover:blur-sm" />
                             <div className='absolute h-full inset-0 bg-primary -to-l opacity-0 group-hover:opacity-60
                             transition-all duration-700'></div>
                             <div className='absolute inset-0 h-full '>

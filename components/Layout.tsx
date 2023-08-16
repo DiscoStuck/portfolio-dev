@@ -34,8 +34,8 @@ const Layout = ({ children }: LayoutProps) => {
   font-sora`
   }>
     <Nav />
-    <Header />
-    {children}
+      <Header />
+      {children}
   </div>
 };
 
