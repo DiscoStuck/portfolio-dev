@@ -50,7 +50,7 @@ const About = () => {
               Self-taught<span className='text-accent'><br /> Developer</span>
             </h2>
             <p className='max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 text-start'>
-              Coding is an evolving art that requires continuous learning. Staying up-to-date and continuously improving is essential to remain competitive. Building myself from scratch as a developer has provided me with great adaptability, autonomy, and the confidence to overcome every challenge I face.
+              Coding is an evolving art that requires continuous learning. Staying up-to-date and improving is essential to remain competitive. Building myself from scratch as a developer has provided me with great adaptability, autonomy, and the confidence to overcome every challenge I face.
             </p>
           </div>
           {/* vertical line*/}
