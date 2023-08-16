@@ -82,6 +82,11 @@ select:-webkit-autofill:focus {
   background-color: transparent;
 }
 
+:focus-visible {
+  outline: none
+}
+
+
 @layer base {
   body {
     @apply bg-secondary overflow-y-auto overflow-x-hidden xl:overflow-hidden leading-relaxed;

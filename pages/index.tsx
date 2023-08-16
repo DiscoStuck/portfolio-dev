@@ -36,8 +36,7 @@ const Home = () => {
             {/* subtitle */}
             <p
               className='max-w-sm md:max-w-lg xl:max-w-xl mx-6 xl:mx-0 mb-10 xl:mb-16 text-base md:text-xl'>
-              I want to make others have the user experience that I enjoy.
-              Help them get the information they need. Create the solution they have been looking for.
+              I want to design the solutions that my users need. Help them get the information they’ve been looking for. Create the experience that I would like to have for myself.
             </p>
             {/* btn */}
             <Link href='/work' className='flex justify-center xl:justify-normal'>
