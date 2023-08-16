@@ -82,7 +82,7 @@ const Form = () => {
                             errorMessage={errors.subject?.message}
                             rules={{
                                 required: { value: true, message: 'Subject is required' },
-                                maxLength: { value: 10, message: 'Subject is too long' }
+                                maxLength: { value: 100, message: 'Subject is too long' }
                             }}
                             register={register} label='subject'
                         />
