@@ -14,7 +14,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   return <Layout>
-    <AnimatePresence mode='wait'>
+    <AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
       <motion.div key={router.route} className='h-full'>
         <Transition />
         <Component {...pageProps} />

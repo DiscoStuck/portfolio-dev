@@ -43,6 +43,7 @@ const Nav = () => {
           duration-300`}
               href={link.path}
               key={index}
+              scroll={false}
             >
               {/* tooltip */}
               <div className='absolute pr-14 right-0 hidden xl:group-hover:flex'>
