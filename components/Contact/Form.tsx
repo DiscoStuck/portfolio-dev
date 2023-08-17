@@ -18,7 +18,6 @@ type IFormInput = {
 const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
 const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
 const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-console.log(serviceId, templateId, publicKey)
 
 
 const Form = () => {
@@ -30,7 +29,6 @@ const Form = () => {
             .send(serviceId!, templateId!, formData, publicKey!)
             .then(
                 (result) => {
-                    console.log(result.text);
                     reset()
                 },
                 (error) => {

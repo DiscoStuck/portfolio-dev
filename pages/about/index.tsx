@@ -42,7 +42,7 @@ const About = () => {
   return (
     <div className='xl:h-full w-full text-center
     xl:text-left pb-[120px] xl:pt-[160px] pt-[23vh] overflow-y-auto'>
-      <div className='container h-full flex flex-col justify-center mx-auto overflow-y-auto xl:pt-[30px]'>
+      <div className='container h-full flex flex-col justify-center mx-auto xl:pt-[30px]'>
         <div className='flex flex-col xl:flex-row gap-x-6 gap-y-4 xl:pr-28 justify-center items-center xl:items-start'>
           {/* text */}
           <div className='flex-1 flex flex-col gap-y-5 xl:gap-y-0'>

@@ -11,7 +11,7 @@ import { TbWorldShare } from 'react-icons/tb'
 import IconComponent from "../IconComponent";
 
 //types
-import { Project } from "./WorkSlider";
+import { Project } from "./WorkSliderNoSSR";
 type ProjectModalProps = {
     project: Project
     isOpen: boolean

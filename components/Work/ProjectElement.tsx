@@ -5,7 +5,7 @@ import Image from "next/image";
 import { MdScreenSearchDesktop } from "react-icons/md";
 
 // types
-import { Project } from "./WorkSlider";
+import { Project } from "./WorkSliderNoSSR";
 type ProjectElementProps = {
     project: Project
     openModal: (arg0: Project) => void

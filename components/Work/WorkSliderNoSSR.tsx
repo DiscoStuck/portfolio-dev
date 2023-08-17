@@ -14,7 +14,8 @@ import { Pagination } from 'swiper'
 // components
 import ProjectElement from './ProjectElement'
 import { useCallback, useEffect, useState } from 'react'
-import ProjectModal from '../../components/Work/ProjectModal'
+import ProjectModal from './ProjectModal'
+import { AnimatePresence } from "framer-motion";
 
 // types
 export type Project = {
@@ -44,10 +45,12 @@ const WorkSlider = () => {
 
         handleResize(); // Check initial screen size
 
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', handleResize);
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
+        }
     }, []);
 
 

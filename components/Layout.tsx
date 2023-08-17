@@ -22,20 +22,26 @@ const saira = Saira({
 import Nav from './Nav/Nav'
 import Header from './Nav/Header'
 import React from 'react'
+import Head from "next/head"
 
 // props
-
 type LayoutProps = {
   children: React.ReactNode
 }
+
 
 const Layout = ({ children }: LayoutProps) => {
   return <div className={` page text-white ${blackOpsOne.variable} ${saira.variable} bg-primary
   font-sora`
   }>
+    <Head>
+      <title>Juanjo Simon</title>
+      <meta name="description" content="Web development portfolio" />
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    </Head>
     <Nav />
-      <Header />
-      {children}
+    <Header />
+    {children}
   </div>
 };
 

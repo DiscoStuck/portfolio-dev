@@ -6,12 +6,10 @@ import { useCallback } from 'react';
 const ParticlesContainer = () => {
   // init
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log("Initializing particles engine...", engine);
     await loadFull(engine)
   }, [])
 
   const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    console.log("Particles loaded!", container);
   }, [])
 
   return (
