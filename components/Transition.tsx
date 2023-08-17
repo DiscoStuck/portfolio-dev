@@ -20,7 +20,7 @@ const Transition = () => {
   return (
     <>      <motion.div
       key='transition1'
-      className='fixed h-full w-screen z-30 bg-[#4b3792]'
+      className='fixed h-full w-screen z-30 bg-[#1F213B] '
       initial='initial'
       exit='exit'
       variants={transitionVariants}
@@ -29,7 +29,7 @@ const Transition = () => {
     />
       <motion.div
         key='transition2'
-        className='fixed h-full w-screen z-40 bg-[#3b2d71]'
+        className='fixed h-full w-screen z-40 bg-[#1B1D33] '
         initial='initial'
         exit='exit'
         variants={transitionVariants}
@@ -38,7 +38,7 @@ const Transition = () => {
       />
       <motion.div
         key='transition3'
-        className='fixed h-full z-50 w-screen bg-[#2e2257]'
+        className='fixed h-full z-50 w-screen bg-[#17182B]'
         initial='initial'
         exit='exit'
         variants={transitionVariants}
