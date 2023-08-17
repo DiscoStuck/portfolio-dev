@@ -20,6 +20,7 @@ const Home = () => {
         <div className='h-full text-center flex flex-col justify-center xl:pt-20
          xl:text-left container mx-auto relative items-center xl:items-start'>
           <motion.div
+            key='contentHome'
             variants={fadeIn('down', 0.4)}
             initial='hidden'
             animate='show'
