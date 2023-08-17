@@ -14,7 +14,7 @@ import Link from 'next/link'
 
 const Home = () => {
   return (
-    <div className='bg-primary h-full pt-[30vh] pb-[110px] xl:py-0'>
+    <div className='bg-primary h-full pt-[25vh] pb-[110px] xl:py-0'>
       {/* text */}
       <div className='h-full w-full relative z-10'>
         <div className='h-full text-center flex flex-col justify-center xl:pt-20
