@@ -34,7 +34,7 @@ const Accordion = ({ text }: AccordionProps) => {
                                 <div className="absolute bg-white top-1/2 left-1/2 -translate-x-1/2 -translate-y-4/10 w-full h-0.5" />
                             </span>
                         </div>}
-                        <div className={`text-left ml-4 transition-[height, opacity] duration-300 overflow-hidden ${selected !== block.title ? 'h-0 opacity-0' : 'h-[105px]'}`}>
+                        <div className={`text-left ml-4 transition-[height, opacity] duration-300 overflow-hidden ${selected !== block.title ? 'h-0 opacity-0' : 'h-fit'}`}>
                             {block.content}
                         </div>
                     </div>

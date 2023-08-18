@@ -59,7 +59,7 @@ const About = () => {
           <div
             className='flex flex-col gap-y-6 xl:gap-y-0 w-full max-w-[500px] xl:max-w-[48%] border-2 rounded-lg 
             border-gray-600 xl:border-none p-6 xl:p-0'>
-            <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 xl:mb-4 flex-wrap xl:justify-start justify-center gap-y-4'>
+            <div className='flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 xl:my-4 flex-wrap xl:justify-start justify-center gap-y-4'>
               {aboutSections.map((item, itemIndex) => {
                 return (
                   <div

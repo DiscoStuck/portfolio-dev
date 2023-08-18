@@ -1,7 +1,6 @@
 // icons
 import {
   FaCss3Alt,
-  FaJs,
   FaReact,
   FaWordpress,
   FaNodeJs,
@@ -11,9 +10,10 @@ import {
 import {
   SiNextdotjs,
   SiTailwindcss,
-  SiAdobe,
   SiMongodb,
   SiPrisma,
+  SiTypescript,
+  SiJavascript,
 } from 'react-icons/si'
 
 import {
@@ -40,7 +40,8 @@ export const strengths = [
 
 export const skillsIcons = [
   <FaCss3Alt color='#264de4' />,
-  <FaJs color='#F0DB4F' />,
+  <SiJavascript color='#F0DB4F' />,
+  <SiTypescript color='#3178C6' />,
   <FaReact color='#61dbfb' />,
   <FaNodeJs color='#3c873a' />,
   <SiNextdotjs color='white' />,
@@ -50,7 +51,6 @@ export const skillsIcons = [
   <FaGitAlt color='#f34f29' />,
   <FcLinux />,
   <FaWordpress color='#00749C' />,
-  <SiAdobe color='#ED2224' />
 ]
 
 export const background = [
@@ -70,9 +70,9 @@ export const background = [
 
 export const moreAboutMe = [
   {
-    content: 'My name is Juan (or Juanjo) and I was born in Spain. I always liked traveling, and somehow ' +
-      'I ended up living in Danang (Vietnam) with my beautiful girlfriend. On my free time I like to ' +
-      'work out, watch movies, play d&d and drink beer with my friends.'
+    content: `I don't like problems, but I love solving them. I am curious by nature and feel an urgent need to know how everything works. I have great respect for those who value other people's time as much as their own.
+    
+    Programming has given a voice to parts of me that always felt misunderstood.`
   }
 ]
 
@@ -81,4 +81,4 @@ export const certifications = [
   'FullStack Open Typescript'
 ]
 
-export const aboutSections = ['Skills', 'Background', 'Strengths', 'About Me']
+export const aboutSections = ['Skills', 'Background', 'Strengths', 'More About Me']
