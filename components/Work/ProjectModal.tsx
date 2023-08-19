@@ -47,7 +47,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                         <div className="mt-4">
                             <div className="flex flex-col sm:flex-row mb-4 items-center border-b-2 border-gray-600">
                                 <Dialog.Title className="flex-1 h-full items-center ">
-                                    <h2 className='text-3xl text font-semibold text-accent h-14 flex items-center px-4'>
+                                    <h2 className='text-3xl text font-semibold text-accent h-14 flex items-center px-4' onClick={() => openInNewTab(project.website)}>
                                         {project.title}
                                     </h2>
                                 </Dialog.Title>

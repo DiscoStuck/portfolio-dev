@@ -79,7 +79,7 @@ const WorkSlider = () => {
                         {workData.map((slide, index) => {
                             return (
                                 <div>
-                                    <h2 className="mb-2 px-[5px] first-letter:text-accent">{slide.title}<hr /></h2>
+                                    <h2 className="mb-2 px-[5px] first-letter:text-accent" onClick={() => openModal(slide)}>{slide.title}<hr /></h2>
                                     <ProjectElement project={slide} key={index} openModal={openModal} />
                                 </div>
                             )
