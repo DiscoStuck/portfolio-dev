@@ -10,7 +10,7 @@ class MyDocument extends Document {
                     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
                     <meta property="og:title" content="Juanjo Simon" />
                     <meta property="og:description" content="Web development portfolio" />
-                    <meta property="og:image" content="og_image.jpg" />
+                    <meta property="og:image" content="https://yourwebsite.com/og_image.jpg" />
                 </Head>
                 <body>
                     <Main />
