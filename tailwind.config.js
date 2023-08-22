@@ -22,15 +22,13 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: "#141524",
+        bg: "#020202",
+        primary: "#181818",
         secondary: "#726E97",
         accent: "#FFB303",
       },
       backgroundImage: {
-        explosion: 'url("/new-explosion-bg.jpg")',
-        circles: 'url("/bg-circles.png")',
-        circleStar: 'url("/circle-star.svg")',
-        site: 'url("/site-bg.svg")',
+        home: 'url("/bg/home_bg.jpg")',
       },
       animation: {
         "spin-slow": "spin 6s linear infinite",

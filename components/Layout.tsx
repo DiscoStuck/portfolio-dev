@@ -30,7 +30,7 @@ type LayoutProps = {
 
 
 const Layout = ({ children }: LayoutProps) => {
-  return <div className={` page text-white ${blackOpsOne.variable} ${saira.variable} bg-primary
+  return <div className={` page text-white ${blackOpsOne.variable} ${saira.variable} bg-bg
   font-sora`
   }>
     <Nav />

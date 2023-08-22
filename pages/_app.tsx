@@ -1,5 +1,6 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
 // components
 import Layout from '../components/Layout';
@@ -14,6 +15,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
   return <Layout>
+    <Head>
+      <title>Juanjo Simon</title>
+    </Head>
     <AnimatePresence mode='wait' onExitComplete={() => window.scrollTo(0, 0)}>
       <motion.div key={router.route} className='h-full'>
         <Transition />

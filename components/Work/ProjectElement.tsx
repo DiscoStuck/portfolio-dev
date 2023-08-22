@@ -19,7 +19,7 @@ const ProjectElement = ({ openModal, project }: ProjectElementProps) => {
             <div className='flex items-center justify-center relative
                     overflow-hidden group h-full'>
                 {/* image */}
-                <Image src={project?.image} width={750} height={450} alt='' />
+                <Image src={project?.image} width={750} height={450} alt='Project mockup' />
                 {/* overlay gradient */}
                 <div className='absolute h-full inset-0 bg-primary opacity-0 xl:group-hover:opacity-60
                       transition-all duration-700'></div>

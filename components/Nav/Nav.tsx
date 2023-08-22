@@ -35,7 +35,7 @@ const Nav = () => {
         {/* inner */}
         <div className='flex w-full xl:flex-col items-center justify-between 
     xl:justify-around px-[10%] md:px-40 xl:px-0 h-[80px] xl:h-[400px] py-8
-    xl:bg-transparent bg-primary border-t-2 border-gray-600 xl:border-2 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full pointer-events-auto'>
+    xl:bg-bg/60 bg-bg border-t-2 border-gray-600 xl:border-2 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full pointer-events-auto'>
           {navData.map((link, index) => {
             return <Link
               className={`${link.path === pathname && 'text-accent'}

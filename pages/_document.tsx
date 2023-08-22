@@ -5,7 +5,6 @@ class MyDocument extends Document {
         return (
             <Html>
                 <Head>
-                    <title>Juanjo Simon</title>
                     <meta name="description" content="Web development portfolio" />
                     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
                     <meta property="og:title" content="Juanjo Simon" />

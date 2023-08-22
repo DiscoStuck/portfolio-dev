@@ -14,7 +14,7 @@ const ParticlesContainer = () => {
 
   return (
     <Particles
-      className='w-full h-full fixed hidden xl:block xl:absolute translate-z-0 left-0'
+      className='w-screen h-full fixed xl:block xl:absolute left-0 top-0'
       id='tsparticles'
       init={particlesInit}
       loaded={particlesLoaded}
@@ -72,7 +72,7 @@ const ParticlesContainer = () => {
             value: 80
           },
           opacity: {
-            value: 0.5
+            value: 0.3
           },
           shape: {
             type: 'circle'
