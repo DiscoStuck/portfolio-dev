@@ -21,7 +21,7 @@ const Home = () => {
       <div className='h-full pt-[50px] pb-[110px] xl:py-0'>
         {/* text */}
         <div className='h-full w-full relative z-10 pt-[10vh]'>
-          <div className='h-full text-center flex flex-col justify-center xl:-translate-y-14 lg:pt-[100px]
+          <div className='h-full text-center flex flex-col justify-center xl:-translate-y-20 lg:pt-[100px]
          xl:text-left container mx-auto relative items-center xl:items-start'>
             <motion.div
               key='contentHome'
@@ -31,7 +31,7 @@ const Home = () => {
               exit='hidden'>
               {/* pretitle */}
               <h2
-                className='text-[20px] leading-tight md:text-[40px] md:leading-[1.3] mb-2 font-semibold'>
+                className='text-[20px] leading-tight md:text-[40px] md:leading-[1.3] mb-4 font-semibold'>
                 <span className='text-accent'>Web</span> User
               </h2>
               {/* title */}
@@ -40,8 +40,8 @@ const Home = () => {
               </h1>
               {/* subtitle */}
               <p
-                className='max-w-sm md:max-w-lg xl:max-w-xl mx-6 xl:mx-0 mb-10 xl:mb-16 text-base md:text-xl'>
-                I want to design the solutions that my users need. Help them get the information they’ve been looking for. Create the experience that I would like to have for myself.
+                className='max-w-sm md:max-w-lg xl:max-w-xl mx-6 xl:mx-0 mb-10 xl:mb-12 text-xl md:text-3xl'>
+                The future is web, and I am coding my way in.
               </p>
               {/* btn */}
               <Link href='/work' className='flex justify-center xl:justify-normal'>

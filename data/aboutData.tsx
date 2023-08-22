@@ -72,7 +72,7 @@ export const moreAboutMe = [
   {
     content: `I don't like problems, but I love solving them. I am curious by nature and feel an urgent need to know how everything works. I have great respect for those who value other people's time as much as their own.
     
-    Programming has given a voice to parts of me that always felt misunderstood.`
+    Programming has given a voice to a part of myself that always felt misunderstood.`
   }
 ]
 

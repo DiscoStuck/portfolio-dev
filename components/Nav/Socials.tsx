@@ -1,6 +1,3 @@
-// links
-import Link from 'next/link'
-
 import { SiLinkedin, SiGithub, SiFreelancer, SiTwitter } from 'react-icons/si';
 
 const Socials = () => {
