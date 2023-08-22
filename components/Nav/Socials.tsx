@@ -5,7 +5,7 @@ import { SiLinkedin, SiGithub, SiFreelancer, SiTwitter } from 'react-icons/si';
 
 const Socials = () => {
   return (
-    <div className='flex items-center gap-x-5 text-lg'>
+    <div className='flex items-center gap-x-5 text-lg xl:mr-[20px]'>
       <a href={'https://www.linkedin.com/in/juan-jose-simon/'} target='_blank' className='hover:text-accent transition-all duration-300'>
         <SiLinkedin />
       </a>

@@ -30,7 +30,7 @@ const Nav = () => {
   return <div className="flex justify-center fixed z-20 h-full w-full pointer-events-none">
     <div className="xl:container h-full w-full flex justify-end">
       <nav className='flex flex-col items-center xl:justify-center
-  gap-y-4 fixed xl:relative bottom-0 xl:mt-[160px] xl:pb-[100px] xl:right-[2%] w-full
+  gap-y-4 fixed xl:relative bottom-0 xl:mt-[160px] xl:pb-[100px] xl:right-[20px] w-full
   xl:w-16 xl:max-w-md z-50'>
         {/* inner */}
         <div className='flex w-full xl:flex-col items-center justify-between 

@@ -7,7 +7,6 @@ import { motion } from 'framer-motion'
 
 // variants
 import { fadeIn } from '../variants'
-import Explosion from '../components/Home/Explosion'
 
 import Button from '../components/Button'
 import Link from 'next/link'
