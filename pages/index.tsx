@@ -12,7 +12,6 @@ import Button from '../components/Button'
 import Link from 'next/link'
 import Image from 'next/image'
 
-
 const Home = () => {
   return (
     <div className='h-screen w-full relative bg-[#020202] overflow-clip'>
@@ -22,7 +21,7 @@ const Home = () => {
         {/* text */}
         <div className='h-full w-full relative z-10 pt-[10vh]'>
           <div className='h-full text-center flex flex-col justify-center xl:-translate-y-20 lg:pt-[100px]
-         xl:text-left container mx-auto relative items-center xl:items-start'>
+            xl:text-left container mx-auto relative items-center xl:items-start'>
             <motion.div
               key='contentHome'
               variants={fadeIn('down', 0.4)}
@@ -52,8 +51,7 @@ const Home = () => {
             <div className='w-full h-full absolute left-0 top-0'>
               {/* bg img */}
               <div className='text-center flex flex-col justify-center xl:pt-40
-         xl:text-left h-full container mx-auto relative'>
-
+              xl:text-left h-full container mx-auto relative'>
               </div>
               {/* <Explosion className='right-0 bottom-0 hidden xl:block z-0' /> */}
             </div>

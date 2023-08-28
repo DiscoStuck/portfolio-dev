@@ -11,6 +11,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.16",
     "@next/font": "^13.4.9",
+    "@vercel/analytics": "^1.0.2",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^10.12.16",
     "next": "13.4.3",

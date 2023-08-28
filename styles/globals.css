@@ -66,6 +66,8 @@ span.swiper-pagination-bullet.swiper-pagination-bullet {
 box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.2);
 }
 
+
+
 /* Change Autocomplete styles in Chrome*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -119,5 +121,8 @@ select:-webkit-autofill:focus {
   }
   .nav-icon {
    @apply h-[24px] w-[24px] group-hover:scale-125;
+  }
+  .red-text {
+    @apply text-red-400
   }
 }

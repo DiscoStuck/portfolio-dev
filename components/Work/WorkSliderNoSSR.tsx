@@ -13,16 +13,15 @@ import { Pagination } from 'swiper'
 
 // components
 import ProjectElement from './ProjectElement'
-import { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import ProjectModal from './ProjectModal'
-import { AnimatePresence } from "framer-motion";
 
 // types
 export type Project = {
     title: string
     image: string
     website: string
-    description: JSX.Element
+    description: React.ReactNode
     stack: string[]
 }
 

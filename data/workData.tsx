@@ -1,4 +1,7 @@
-export const workData = [
+import React from "react"
+import { Project } from "../components/Work/WorkSliderNoSSR"
+
+export const workData: Project[] = [
     {
         title: 'Spacebnb',
         image: "/projects/spacebnb.png",
@@ -24,7 +27,7 @@ export const workData = [
         title: 'Edimode',
         image: "/projects/edimode.png",
         website: 'https://edimode.com/',
-        description: <p>'Website of the MVP for an online business of product photography editing. Built using WordPress and Elementor before learning coding.</p>,
+        description: <p>'MVP of an online business of product photography editing. Built using WordPress and Elementor before learning coding.</p>,
         stack: ['wordpress']
     },
 ]

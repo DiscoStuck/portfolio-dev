@@ -58,7 +58,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                                 </div>
                             </div>
                             <div>
-                                <Dialog.Description className='text-gray-200'>
+                                <Dialog.Description>
                                     {project.description}
                                 </Dialog.Description>
                             </div>
