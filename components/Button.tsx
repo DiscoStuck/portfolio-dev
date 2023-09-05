@@ -8,15 +8,14 @@ type ButtonProps = {
     className?: string
 }
 
-const Button: React.FC<ButtonProps> = ({ text, textSize, paddingY, className }) => {
+const Button: React.FC<ButtonProps> = ({ text, textSize, className }) => {
     const finalTextSize = textSize ? `text-[${textSize}px]` : 'text-[18px]'
-    const finalPaddingY = paddingY ? `pt-${paddingY}` : 'py-8'
     return (
         <button className={`btn rounded-full border border-white/50 w-fit
-            px-8 ${finalPaddingY} transition-all duration-300 flex items items-center justify-center
+            px-8 transition-all duration-300 flex items items-center justify-center
             overflow-hidden hover:border-accent group ${className}`}>
             <span className={`group-hover:-translate-y-[120%] group-hover:opacity-0 transition-all
-              duration-500 ${finalTextSize}`}>
+              duration-500 `}>
                 {text}
             </span>
             <BsArrowRight className={`-translate-y-[120%] opacity-0 group-hover:flex

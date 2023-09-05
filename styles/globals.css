@@ -97,10 +97,10 @@ select:-webkit-autofill:focus {
     @apply w-full h-full xl:h-screen min-h-[100vh];
   }
   .h1 {
-    @apply text-[42px] leading-tight md:text-[60px] md:leading-[1.3] mb-8 font-semibold;
+    @apply text-[42px] leading-tight md:text-[60px] 2xl:text-[90px] md:leading-[1.3] mb-8 2xl:mb-12 font-semibold;
   }
   .h2 {
-    @apply text-[35px] leading-tight md:text-[54px] md:leading-[1.3] mb-4 font-semibold;
+    @apply text-[35px] leading-tight md:text-[54px] 2xl:text-[81px] md:leading-[1.3] mb-4 font-semibold;
   }
   p {
     @apply leading-[1.8] text-white/60 font-light;
@@ -120,7 +120,10 @@ select:-webkit-autofill:focus {
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
   .nav-icon {
-   @apply h-[24px] w-[24px] group-hover:scale-125;
+   @apply h-[24px] w-[24px] 2xl:h-[36px] 2xl:w-[36px] group-hover:scale-125;
+  }
+  .social-icon {
+    @apply h-[20px] w-[20px] 2xl:h-[30px] 2xl:w-[30px];
   }
   .red-text {
     @apply text-red-400

@@ -12,6 +12,8 @@ module.exports = {
     container: {
       padding: {
         DEFAULT: "15px",
+        xl: "3rem",
+        "2xl": "10rem",
       },
     },
     screens: {
@@ -19,6 +21,7 @@ module.exports = {
       md: "768px",
       lg: "960px",
       xl: "1200px",
+      "2xl": "1800px",
     },
     extend: {
       colors: {

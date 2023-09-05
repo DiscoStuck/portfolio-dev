@@ -31,16 +31,16 @@ const Nav = () => {
     <div className="xl:container h-full w-full flex justify-end">
       <nav className='flex flex-col items-center xl:justify-center
   gap-y-4 fixed xl:relative bottom-0 xl:mt-[160px] xl:pb-[100px] xl:right-[20px] w-full
-  xl:w-16 xl:max-w-md z-50'>
+  xl:w-16 2xl:w-24 xl:max-w-md z-50'>
         {/* inner */}
         <div className='flex w-full xl:flex-col items-center justify-between 
-    xl:justify-around px-[10%] md:px-40 xl:px-0 h-[80px] xl:h-[400px] py-8
-    xl:bg-bg/60 bg-bg border-t-2 border-gray-600 xl:border-2 backdrop-blur-sm text-3xl xl:text-xl xl:rounded-full pointer-events-auto'>
+    xl:justify-around px-[10%] md:px-40 xl:px-0 h-[80px] xl:h-[400px] 2xl:h-[600px] py-8
+    xl:bg-bg/60 bg-bg border-t-2 border-gray-600 xl:border-2 backdrop-blur-sm xl:rounded-full pointer-events-auto'>
           {navData.map((link, index) => {
             return <Link
               className={`${link.path === pathname && 'text-accent'}
           relative flex items-center group hover:text-accent transition-all
-          duration-300`}
+          duration-300 text-3xl`}
               href={link.path}
               key={index}
               scroll={false}

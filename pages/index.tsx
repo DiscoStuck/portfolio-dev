@@ -15,7 +15,7 @@ import Image from 'next/image'
 const Home = () => {
   return (
     <div className='h-screen w-full relative bg-[#020202] overflow-clip'>
-      <Image src='/bg/home_bg.jpg' width={900} height={900 / 2.36} className='absolute bottom-[80px] xl:bottom-0 right-[50%] translate-x-1/2' alt='' />
+      <Image src='/bg/home_bg.jpg' width={1200} height={1200 / 2.36} className='absolute bottom-[80px] xl:bottom-0 right-[50%] translate-x-1/2 xl:w-[900px] 2xl:w-[1200px]' alt='' />
       <ParticlesContainer />
       <div className='h-full pt-[50px] pb-[110px] xl:py-0'>
         {/* text */}
@@ -30,7 +30,7 @@ const Home = () => {
               exit='hidden'>
               {/* pretitle */}
               <h2
-                className='text-[20px] leading-tight md:text-[40px] md:leading-[1.3] mb-4 font-semibold'>
+                className='text-[20px] leading-tight md:text-[40px] 2xl:text-[60px] md:leading-[1.3] mb-4 2xl:mb-8 font-semibold'>
                 <span className='text-accent'>Web</span> User
               </h2>
               {/* title */}
@@ -39,12 +39,12 @@ const Home = () => {
               </h1>
               {/* subtitle */}
               <p
-                className='max-w-sm md:max-w-lg xl:max-w-xl mx-6 xl:mx-0 mb-10 xl:mb-12 text-xl md:text-3xl'>
+                className='max-w-sm md:max-w-lg xl:max-w-xl 2xl:max-w-5xl mx-6 xl:mx-0 mb-10 xl:mb-16 text-xl md:text-3xl 2xl:text-5xl'>
                 The future is web, and I am coding my way in.
               </p>
               {/* btn */}
               <Link href='/work' className='flex justify-center xl:justify-normal'>
-                <Button text='My Projects' className='text-4xl relative z-40' />
+                <Button text='My Projects' className='relative z-40 text-[18px] 2xl:text-[30px] py-8 2xl:py-14 2xl:px-12' textSize={40} />
               </Link>
             </motion.div>
             {/* image */}
