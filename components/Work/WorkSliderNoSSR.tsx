@@ -62,7 +62,7 @@ const WorkSlider = () => {
                     slidesPerView={2}
                     pagination={{ clickable: true }}
                     modules={[Pagination]}
-                    className='xl:h-[340px] sm:h-[480px] w-full '
+                    className='xl:h-[340px] 2xl:h-[450px] sm:h-[480px] w-full '
                 >
                     {workData.map((slide, index) => {
                         return (

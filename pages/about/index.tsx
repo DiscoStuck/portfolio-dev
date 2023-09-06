@@ -54,7 +54,7 @@ const About = () => {
             </p>
           </div>
           {/* vertical line*/}
-          <div className='xl:h-[300px] 2xl:h-[450px] xl:border-l-[1px] border-white border-solid mr-6 ml-4' />
+          <div className='xl:h-[310px] 2xl:h-[470px] xl:border-l-[1px] border-white border-solid mr-6 ml-4' />
           {/* info */}
           <div
             className='flex flex-col gap-y-6 xl:gap-y-0 w-full max-w-[500px] xl:max-w-[48%] border-2 rounded-lg 
