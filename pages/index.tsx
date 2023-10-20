@@ -39,7 +39,10 @@ const Home = () => {
               </h1>
               {/* subtitle */}
               <p
-                className='max-w-sm md:max-w-lg xl:max-w-xl 2xl:max-w-5xl mx-6 xl:mx-0 mb-10 xl:mb-16 text-xl md:text-3xl 2xl:text-5xl'>
+                className='max-w-sm mx-6 mb-10 text-xl 
+                md:max-w-lg md:text-3xl
+                xl:max-w-xl xl:mx-0 xl:mb-12
+                2xl:max-w-5xl 2xl:text-5xl 2xl:mb-18'>
                 The future is web, and I am coding my way in.
               </p>
               {/* btn */}
