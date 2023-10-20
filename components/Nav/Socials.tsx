@@ -12,7 +12,7 @@ const Socials = () => {
       <a href='https://www.freelancer.com/u/JuanjoSimon' target='_blank' className='hover:text-accent transition-all duration-300'>
         <SiFreelancer className='social-icon' />
       </a>
-      <a target='_blank' href={'https://www.freelancer.com/u/JuanjoSimon'} className='hover:text-accent transition-all duration-300'>
+      <a target='_blank' href={'https://github.com/JSaimonDev'} className='hover:text-accent transition-all duration-300'>
         <SiGithub className='social-icon' />
       </a>
     </div>
