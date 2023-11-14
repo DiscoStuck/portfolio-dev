@@ -14,7 +14,12 @@ import {
   SiPrisma,
   SiTypescript,
   SiJavascript,
+  SiPostgresql,
 } from 'react-icons/si'
+
+import {
+  PiFileSqlLight
+} from 'react-icons/pi'
 
 import {
   FcLinux,
@@ -45,12 +50,15 @@ export const skillsIcons = [
   <FaReact color='#61dbfb' />,
   <FaNodeJs color='#3c873a' />,
   <SiNextdotjs color='white' />,
-  < SiTailwindcss color='#38BDF8' />,
+  <SiTailwindcss color='#38BDF8' />,
+  <PiFileSqlLight color='white' />,
   <SiMongodb color='#02B853' />,
+  <SiPostgresql color='#336791' />,
   <SiPrisma color='white' />,
   <FaGitAlt color='#f34f29' />,
   <FcLinux />,
   <FaWordpress color='#00749C' />,
+
 ]
 
 export const background = [

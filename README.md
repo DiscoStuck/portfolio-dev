@@ -1,9 +1,10 @@
 # Portfolio web developer
+
 ![Home page screenshot](/public/portfolio-screenshot.png)
 
 Personal portfolio where I show my web developer projects and provide some more info about myself and links.
 
-It of the project done in [this vide](https://www.youtube.com/watch?v=qp0-L_M3Ad4&t=8549s&ab_channel=CristianMihai).
+It of the project done in [this video](https://www.youtube.com/watch?v=qp0-L_M3Ad4&t=8549s&ab_channel=CristianMihai).
 
 Technologies used:
 
