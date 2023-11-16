@@ -21,14 +21,14 @@ const ProjectElement = ({ openModal, project }: ProjectElementProps) => {
                 {/* image */}
                 <Image src={project?.image} width={750} height={450} alt='Project mockup' />
                 {/* overlay gradient */}
-                <div className='absolute h-full inset-0 bg-primary opacity-0 xl:group-hover:opacity-60
+                <div className='absolute h-full inset-0 bg-primary opacity-0 xl:group-hover:opacity-70
                       transition-all duration-700'></div>
                 {/* title */}
                 <div className='absolute inset-0 h-full '>
                     <div className='h-full gap-x-2 text-[24px] tracking-[0.2em]
                      xl:group-hover:translate-y-0 xl:translate-y-full transition-all duration-300 flex flex-col justify-center items-center'>
                         {/* icon */}
-                        <div className='hidden xl:block text-7xl'><MdScreenSearchDesktop /></div>
+                        <h2 className='hidden xl:block text-center tracking-normal text-3xl'>{project.title}</h2>
                     </div>
                 </div>
             </div>
