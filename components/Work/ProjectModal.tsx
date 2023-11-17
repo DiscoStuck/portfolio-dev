@@ -5,7 +5,7 @@ import { Dialog } from "@headlessui/react";
 import Image from "next/image";
 
 // icons
-import { TbWorldShare } from 'react-icons/tb'
+import { SiGithub } from "react-icons/si";
 
 // components
 import IconComponent from "../IconComponent";
@@ -39,7 +39,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                                     xl:group-hover:translate-y-0 xl:translate-y-full transition-all duration-300 flex flex-col justify-center items-center'>
                                     <div className=" bg-primary bg-opacity-80 xl:bg-transparent flex flex-col items-center justify-center rounded-full w-[70px] h-[70px] sm:w-[90px] sm:h-[90px]">
                                         {/* icons */}
-                                        <div className=' text-3xl sm:text-5xl xl:text-7xl 2xl:text-9xl'><TbWorldShare /></div>
+                                        <div className=' text-3xl sm:text-5xl xl:text-7xl 2xl:text-9xl'><SiGithub /></div>
                                     </div>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                                         {project.title}
                                     </h2>
                                 </Dialog.Title>
-                                <div className="h-14 2xl:h-24 px-4 2xl:px-6 flex text-2xl 2xl:text-5xl md:text-3xl gap-x-4 items-center md:self-end">
+                                <div className="h-14 2xl:h-24 px-4 2xl:px-6 flex  2xl:text-5xl text-2xl gap-x-4 items-center md:self-end">
                                     {project.stack.map(name => {
                                         return <IconComponent name={name} />
                                     })}

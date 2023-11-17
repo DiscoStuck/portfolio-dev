@@ -14,6 +14,9 @@ import {
   SiAdobe,
   SiMongodb,
   SiPrisma,
+  SiTypescript,
+  SiPostgresql,
+  SiAmazonaws,
 } from 'react-icons/si'
 
 import {
@@ -36,7 +39,10 @@ const iconComponentList: ColorComponent = {
   git: <FaGitAlt color='#f34f29' />,
   linux: <FcLinux />,
   wordpress: <FaWordpress color='#00749C' />,
-  adobe: <SiAdobe color='#ED2224' />
+  adobe: <SiAdobe color='#ED2224' />,
+  typescript: <SiTypescript color='#3178C6' />,
+  postgres: <SiPostgresql color='#336791' />,
+  aws: <SiAmazonaws color='	#FF9900' />
 }
 
 type IconComponentProps = {

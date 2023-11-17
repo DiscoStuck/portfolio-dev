@@ -1,6 +1,6 @@
 type textBlock = {
-    title?: String,
-    content?: String
+    title?: string,
+    content?: string
 }
 
 type TextProps = {

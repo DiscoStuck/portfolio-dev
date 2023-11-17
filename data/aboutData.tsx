@@ -15,6 +15,7 @@ import {
   SiTypescript,
   SiJavascript,
   SiPostgresql,
+  SiCsharp,
 } from 'react-icons/si'
 
 import {
@@ -24,6 +25,8 @@ import {
 import {
   FcLinux,
 } from 'react-icons/fc'
+import { Children } from 'react'
+import { openInNewTab } from '../utils'
 
 export const strengths = [
   {
@@ -58,6 +61,7 @@ export const skillsIcons = [
   <FaGitAlt color='#f34f29' />,
   <FcLinux />,
   <FaWordpress color='#00749C' />,
+  <SiCsharp color='#682876' />
 
 ]
 
@@ -84,9 +88,33 @@ export const moreAboutMe = [
   }
 ]
 
+const CertificationLink = ({ link, children }: { link: string, children: string }) => {
+  return (
+    <div onClick={() => openInNewTab(link)} className='cursor-pointer'>
+      {children}
+    </div>
+  )
+}
+
 export const certifications = [
-  'FullStack Open Core (part 1-8)',
-  'FullStack Open Typescript'
+  {
+    title: 'FullStack Open - Core (part 1-8)',
+    content: <CertificationLink link='/certifications/certificate-fullstack.png'>Link to certificate</CertificationLink>
+  },
+  {
+    title: 'FullStack Open - Typescript',
+    content: <CertificationLink link='/certifications/certificate-typescript.png'>Link to certificate</CertificationLink>
+  },
+  {
+    title: 'FreeCodeCamp - Relational Database',
+    content: <CertificationLink link='https://www.freecodecamp.org/certification/JuanjoSimon/relational-database-v8'>Link to certificate</CertificationLink>
+  },
+  {
+    title: 'Microsoft - Foundational C#',
+    content: <CertificationLink link='https://www.freecodecamp.org/certification/JuanjoSimon/foundational-c-sharp-with-microsoft'>Link to certificate</CertificationLink>
+  }
 ]
 
-export const aboutSections = ['Skills', 'Background', 'Strengths', 'More About Me']
+
+
+export const aboutSections = ['Skills', 'Certifications', 'Strengths', 'Background']

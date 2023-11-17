@@ -2,8 +2,8 @@
 import { useState } from "react"
 
 type textBlock = {
-    title?: String,
-    content?: String
+    title?: string,
+    content?: string | JSX.Element
 }
 
 type AccordionProps = {

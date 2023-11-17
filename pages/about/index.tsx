@@ -5,7 +5,7 @@ import Skills from '../../components/About/Skills'
 import Text from '../../components/About/Text'
 
 //  data
-import { strengths, skillsIcons, background, moreAboutMe, aboutSections } from '../../data/aboutData'
+import { strengths, skillsIcons, background, certifications, aboutSections } from '../../data/aboutData'
 
 
 // framer motion
@@ -24,7 +24,7 @@ const renderSwitch = (index: Number) => {
       </OpacityTransition>
     case 1:
       return <OpacityTransition>
-        <Text text={background} key={`content-${index}`} />
+        <Accordion text={certifications} key={`content-${index}`} />
       </OpacityTransition>
     case 2:
       return <OpacityTransition>
@@ -32,7 +32,7 @@ const renderSwitch = (index: Number) => {
       </OpacityTransition>
     case 3:
       return <OpacityTransition>
-        <Text text={moreAboutMe} key={`content-${index}`} />
+        <Text text={background} key={`content-${index}`} />
       </OpacityTransition>
   }
 }
