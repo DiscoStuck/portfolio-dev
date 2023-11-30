@@ -18,12 +18,11 @@ const saira = Saira({
   weight: ['100', '200', '300', '400', '500', '600', '700', '800']
 })
 
-// import components
 import Nav from './Nav/Nav'
 import Header from './Nav/Header'
 import React from 'react'
+import ScrollEvent from './Nav/ScrollEvent'
 
-// props
 type LayoutProps = {
   children: React.ReactNode
 }
@@ -34,6 +33,7 @@ const Layout = ({ children }: LayoutProps) => {
   font-sora`
   }>
     <Nav />
+    <ScrollEvent />
     <Header />
     {children}
   </div>
