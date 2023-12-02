@@ -20,8 +20,8 @@ const ScrollEvent = () => {
         _.throttle((event: any) => {
             let wheelDirection
 
-            if (event.deltaY > 0) wheelDirection = 'up'
-            else if (event.deltaY < 0) wheelDirection = 'down'
+            if (event.deltaY > 0) wheelDirection = 'down'
+            else if (event.deltaY < 0) wheelDirection = 'up'
 
             console.log(wheelDirection)
 
@@ -36,9 +36,11 @@ const ScrollEvent = () => {
                     wheelToPage('/about', '/contact', wheelDirection)
                     break
                 case "/contact":
-                    wheelToPage('/contact', '', wheelDirection)
+                    wheelToPage('/work', '', wheelDirection)
+                default:
+                    break
             }
-        }, 200),
+        }, 100),
         []
     );
 

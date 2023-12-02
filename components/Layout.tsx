@@ -33,7 +33,7 @@ const Layout = ({ children }: LayoutProps) => {
   font-sora`
   }>
     <Nav />
-    <ScrollEvent />
+    {/* <ScrollEvent /> */}
     <Header />
     {children}
   </div>
